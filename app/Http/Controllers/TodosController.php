@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Todo;
 
 class TodosController extends Controller
 {
     public function index()
     {
-    	return view('index');
+    	$todos = Todo::all();
+    	return view('index', compact('todos'));
     }
 }
