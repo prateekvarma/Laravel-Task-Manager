@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="/todos">Todos</a>
-                    
+                    <a href="/create">Create</a>
                 </div>
             </div>
         </div>
