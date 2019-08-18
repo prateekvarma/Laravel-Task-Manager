@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Todos</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+
 	<h1>Todos List</h1>
 	@foreach($todos as $todo)
-		<li>{{ $todo->name }}</li>
-		<li>{{ $todo->description }}</li>
-		<li>{{ $todo->completed }}</li>
+		<li>{{ $todo->name }} - <a href="/todos/{{ $todo->id }}">View</a></li>
 	@endforeach
-</body>
-</html>
+
+@endsection

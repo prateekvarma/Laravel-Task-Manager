@@ -12,4 +12,11 @@ class TodosController extends Controller
     	$todos = Todo::all();
     	return view('index', compact('todos'));
     }
+
+    public function show($todo)
+    {
+    	$todo_found = Todo::find($todo);
+
+    	return view('show', compact('todo_found'));
+    }
 }
